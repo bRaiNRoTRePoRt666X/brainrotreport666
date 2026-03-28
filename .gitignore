@@ -1,0 +1,83 @@
+# Media Files (Large)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.m4v
+*.mpg
+*.mpeg
+*.prproj
+*.drx
+*.fcpxml
+*.aep
+
+# Audio
+*.wav
+*.mp3
+*.aac
+*.flac
+*.m4a
+*.aiff
+
+# Images (except in specific dirs)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.psd
+*.xcf
+!/departments/creative/thumbnails/.gitkeep
+!/shared/brand/*.png
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+*.key
+*.pem
+id_rsa
+id_ed25519
+hosts.yml
+api_keys.json
+credentials.json
+.secrets/
+
+# Logs
+logs/*.log
+logs/*.debug
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+tmp/*
+!tmp/.gitkeep
+*.tmp
+*.temp
+
+# Cache
+.cache/
+.ffmpeg/
+.npm/
+
+# Render intermediates
+*.proxy
+*.bak
+*.backup
+*.render
+
+# Large archives
+*.zip
+*.rar
+*.7z
+*.tar.gz
