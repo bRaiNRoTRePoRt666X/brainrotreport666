@@ -1,0 +1,120 @@
+{
+  "episode": {
+    "id": "EP001",
+    "number": 1,
+    "title": "Episode 001",
+    "description": "TBD",
+    "status": "in-progress",
+    "campaign": null,
+    "created_at": "2026-03-29",
+    "updated_at": "2026-03-29",
+    "published_at": null,
+    "archived_at": null
+  },
+  "departments": {
+    "creative": {
+      "assigned": "brainrotreport666",
+      "script": "EP001-draft.md",
+      "storyboard": null,
+      "graphics": [],
+      "thumbnails": [],
+      "status": "in-progress",
+      "completed_at": null,
+      "ethics_review": {
+        "reviewer": null,
+        "approved": false,
+        "notes": ""
+      }
+    },
+    "production": {
+      "assigned": "brainrotreport666",
+      "footage_files": [],
+      "audio_files": [],
+      "releases": [],
+      "logs": null,
+      "status": "pending",
+      "completed_at": null,
+      "safety_check": {
+        "reviewer": null,
+        "approved": false,
+        "notes": ""
+      }
+    },
+    "post-production": {
+      "assigned": null,
+      "editor": null,
+      "vfx_artist": null,
+      "colorist": null,
+      "audio_engineer": null,
+      "versions": [],
+      "status": "pending",
+      "completed_at": null,
+      "qc": {
+        "reviewer": null,
+        "passed": false,
+        "issues": [],
+        "notes": ""
+      }
+    },
+    "distribution": {
+      "assigned": "brainrotreport666",
+      "platforms": {
+        "youtube": { "video_id": null, "url": null, "published_at": null, "status": "pending" },
+        "instagram": { "media_id": null, "url": null, "published_at": null, "status": "pending" },
+        "tiktok": { "video_id": null, "url": null, "published_at": null, "status": "pending" }
+      },
+      "schedule": null,
+      "seo": { "keywords": [], "tags": [] },
+      "status": "pending",
+      "completed_at": null
+    },
+    "analytics": {
+      "assigned": null,
+      "tracking_enabled": false,
+      "reports": [],
+      "status": "pending"
+    },
+    "legal-compliance": {
+      "assigned": null,
+      "contracts": [],
+      "rights": [],
+      "disclosures": [],
+      "ethics_approved": false,
+      "status": "pending",
+      "completed_at": null
+    },
+    "community": {
+      "assigned": null,
+      "engagement_plan": null,
+      "moderation_guidelines": null,
+      "feedback_collected": [],
+      "status": "pending"
+    },
+    "finance": {
+      "assigned": null,
+      "budget": { "allocated": 0, "spent": 0, "remaining": 0 },
+      "invoices": [],
+      "revenue": { "youtube": 0, "instagram": 0, "tiktok": 0, "sponsorships": 0 },
+      "status": "pending"
+    }
+  },
+  "handoffs": [],
+  "ethics": {
+    "checklist": {
+      "creative": false,
+      "production": false,
+      "post-production": false,
+      "distribution": false
+    },
+    "final_approval": {
+      "reviewer": null,
+      "approved": false,
+      "timestamp": null
+    }
+  },
+  "analytics": {
+    "youtube": { "views": 0, "likes": 0, "comments": 0, "watch_time_hours": 0, "retention_avg": 0 },
+    "instagram": { "views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0 },
+    "tiktok": { "views": 0, "likes": 0, "comments": 0, "shares": 0, "watch_time_avg": 0 }
+  }
+}
