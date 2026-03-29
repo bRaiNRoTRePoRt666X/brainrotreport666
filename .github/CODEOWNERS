@@ -1,0 +1,32 @@
+# Code Owners
+# These owners will be requested for review on protected branches
+
+# Default owners for all files
+* @bRaiNRoTRePoRt666X
+
+# Department-specific ownership
+departments/creative/ @bRaiNRoTRePoRt666X
+departments/production/ @bRaiNRoTRePoRt666X
+departments/post-production/ @bRaiNRoTRePoRt666X
+departments/distribution/ @bRaiNRoTRePoRt666X
+departments/analytics/ @bRaiNRoTRePoRt666X
+departments/legal-compliance/ @bRaiNRoTRePoRt666X
+departments/community/ @bRaiNRoTRePoRt666X
+departments/finance/ @bRaiNRoTRePoRt666X
+
+# Documentation
+docs/ @bRaiNRoTRePoRt666X
+
+# Scripts and automation
+scripts/ @bRaiNRoTRePoRt666X
+
+# Metadata and templates
+metadata/ @bRaiNRoTRePoRt666X
+shared/templates/ @bRaiNRoTRePoRt666X
+
+# Ethics and compliance (require explicit approval)
+docs/ethics/ @bRaiNRoTRePoRt666X
+departments/legal-compliance/ethics/ @bRaiNRoTRePoRt666X
+
+# Episode content (requires legal review)
+episodes/ @bRaiNRoTRePoRt666X

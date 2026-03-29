@@ -1,0 +1,60 @@
+name: Check Ethics Compliance
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'episodes/**'
+      - 'departments/**'
+      - 'docs/ethics/**'
+
+jobs:
+  ethics-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run ethics compliance check
+        run: |
+          echo "╔══════════════════════════════════════════════════════════╗"
+          echo "║     ETHICS COMPLIANCE CHECK                             ║"
+          echo "╚══════════════════════════════════════════════════════════╝"
+          echo ""
+          
+          # Check if ethics documentation exists
+          if [ -f "docs/ethics/campaign-principles.md" ]; then
+            echo "✓ Campaign principles documented"
+          else
+            echo "✗ WARNING: Campaign principles missing"
+            exit 1
+          fi
+          
+          # Check department structure
+          echo ""
+          echo "Checking department structure..."
+          required_depts="creative production post-production distribution legal-compliance"
+          for dept in $required_depts; do
+            if [ -d "departments/$dept" ]; then
+              echo "✓ $dept department exists"
+            else
+              echo "✗ ERROR: $dept department missing"
+              exit 1
+            fi
+          done
+          
+          # Check for handoff logs if episodes exist
+          echo ""
+          echo "Checking handoff logs..."
+          if [ -d "shared/handoffs" ]; then
+            handoff_count=$(ls -1 shared/handoffs/*.log 2>/dev/null | wc -l)
+            echo "✓ Handoff directory exists ($handoff_count logs)"
+          else
+            echo "⚠ No handoff directory (create when first episode starts)"
+          fi
+          
+          echo ""
+          echo "✓ Ethics compliance check passed"

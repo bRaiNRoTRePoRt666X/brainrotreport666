@@ -1,0 +1,61 @@
+name: Validate Episode Metadata
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'metadata/**/*.json'
+
+jobs:
+  validate-metadata:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install JSON validator
+        run: npm install -g ajv-cli
+      
+      - name: Validate episode metadata schema
+        run: |
+          echo "Validating episode metadata files..."
+          for file in metadata/episodes/*.json; do
+            if [ -f "$file" ] && [ "$file" != "metadata/episodes/template.json" ]; then
+              echo "Checking: $file"
+              # Basic JSON syntax validation
+              node -e "JSON.parse(require('fs').readFileSync('$file', 'utf8'))" || exit 1
+            fi
+          done
+          echo "✓ All metadata files are valid JSON"
+      
+      - name: Check required fields
+        run: |
+          echo "Checking required fields in episode metadata..."
+          for file in metadata/episodes/*.json; do
+            if [ -f "$file" ] && [ "$file" != "metadata/episodes/template.json" ]; then
+              echo "Validating: $file"
+              node -e "
+                const fs = require('fs');
+                const data = JSON.parse(fs.readFileSync('$file', 'utf8'));
+                
+                // Check episode object
+                if (!data.episode) throw new Error('Missing episode object');
+                if (!data.episode.id) throw new Error('Missing episode.id');
+                if (!data.episode.title) throw new Error('Missing episode.title');
+                if (!data.episode.status) throw new Error('Missing episode.status');
+                
+                // Check departments object
+                if (!data.departments) throw new Error('Missing departments object');
+                
+                console.log('✓ Valid episode metadata');
+              " || exit 1
+            fi
+          done

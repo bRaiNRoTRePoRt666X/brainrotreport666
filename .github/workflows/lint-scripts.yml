@@ -1,0 +1,43 @@
+name: Lint Scripts
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'scripts/**/*.sh'
+      - '**/*.sh'
+
+jobs:
+  lint-scripts:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Install ShellCheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+      
+      - name: Run ShellCheck
+        run: |
+          echo "Running ShellCheck on all shell scripts..."
+          errors=0
+          for script in $(find scripts -name "*.sh" -type f); do
+            echo "Checking: $script"
+            if ! shellcheck "$script"; then
+              errors=$((errors + 1))
+            fi
+          done
+          
+          if [ $errors -gt 0 ]; then
+            echo ""
+            echo "✗ ShellCheck found $errors file(s) with issues"
+            exit 1
+          fi
+          
+          echo ""
+          echo "✓ All scripts passed ShellCheck"
