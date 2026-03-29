@@ -1,4 +1,4 @@
-# EP001 — Episode 001
+# EP001 — Bill Gates: Public Enemy 1
 
 **Status:** Draft  
 **Phase:** Creative  
@@ -11,7 +11,7 @@
 | Field | Value |
 |-------|-------|
 | Episode ID | EP001 |
-| Title | TBD |
+| Title | Bill Gates: Public Enemy 1 |
 | Duration | TBD |
 | Format | TBD |
 | Campaign | TBD |
