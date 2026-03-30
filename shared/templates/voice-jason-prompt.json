@@ -1,0 +1,12 @@
+{
+  "voice_profile": "Joker_Chaos_666",
+  "base_voice": "raspy_theatrical_male",
+  "emotion_core": "gleeful_madness_with_sudden_sadness_spikes",
+  "delivery_style": "theatrical_raspy_laughing_through_teeth",
+  "pitch": "mid_with_wild_fluctuations",
+  "speed": "erratic",
+  "laughter": "uncontrollable_HA-HAAA_mixed_with_wheezing",
+  "distortion": "light_glitch_on_key_words + vinyl_crackle",
+  "keywords_to_emphasize": ["brainrot","666","beautiful_decay","why_so_serious"],
+  "forbidden": ["calm","professional"]
+}
