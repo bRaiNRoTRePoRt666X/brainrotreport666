@@ -1,1 +1,8 @@
-{"voice_profile":"Bill_Gates_Cold_Billionaire","base_voice":"monotone_nerd_evil","emotion_core":"detached_sadism","delivery_style":"quiet_then_sudden_cackle","pitch":"flat_mid","distortion":"vaccine_whispers_in_background"}
+{
+  "voice_profile": "Bill_Gates_Cold_Billionaire",
+  "base_voice": "monotone_nerd_evil",
+  "emotion_core": "detached_sadism",
+  "delivery_style": "quiet_then_sudden_cackle",
+  "pitch": "flat_mid",
+  "distortion": "vaccine_whispers_in_background"
+}
