@@ -1,9 +1,4 @@
-assets
-departments
-docs
-episodes
-logs
-metadata
-scripts
-shared
-tmp
+.gitignore
+README.md
+QWEN.md
+ls.txt
