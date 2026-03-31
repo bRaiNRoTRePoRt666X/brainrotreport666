@@ -1,0 +1,9 @@
+assets
+departments
+docs
+episodes
+logs
+metadata
+scripts
+shared
+tmp
