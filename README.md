@@ -11,7 +11,7 @@ integrity, transparency, and positive impact behind the scenes.
 ## 🏢 Departments
 
 ```
-self-titled/
+brainrotreport666/
 ├── departments/
 │   ├── creative/           # Content conception & design
 │   │   ├── scripts/        # Episode scripts, outlines
@@ -81,22 +81,22 @@ self-titled/
 │
 ├── scripts/                # Automation
 │   ├── workflow/           # Workflow management
-│   ├── automation/         # Task automation
+│   ├── automation/         # Task automation (planned)
 │   └── reports/            # Report generation
 │
 ├── docs/                   # Documentation
 │   ├── departments/        # Dept. documentation
 │   ├── workflows/          # Process documentation
 │   ├── ethics/             # Ethical guidelines
-│   └── sop/                # Standard operating procedures
+│   └── sop/                # Standard operating procedures (planned)
 │
 ├── metadata/               # Structured data
 │   ├── episodes/           # Episode metadata
 │   ├── departments/        # Department tracking
 │   └── campaigns/          # Campaign metadata
 │
-├── config/                 # Configuration
-├── .github/workflows/      # CI/CD
+├── config/                 # Configuration (planned)
+├── .github/workflows/      # CI/CD (planned)
 ├── logs/                   # System logs
 └── tmp/                    # Temporary files
 ```
@@ -164,19 +164,25 @@ SUPPORTING DEPARTMENTS (All Stages):
 
 ## 🚀 Quick Start
 
-```bash
-# Create new episode request
-./scripts/workflow/new-episode.sh "Episode Title"
+Run scripts from the repo root.
 
-# Move episode through workflow
+```bash
+# Log each department handoff to shared/handoffs/
 ./scripts/workflow/handoff.sh EP001 creative production
 ./scripts/workflow/handoff.sh EP001 production post-production
 ./scripts/workflow/handoff.sh EP001 post-production distribution
 
-# Generate department reports
-./scripts/reports/department-status.sh
+# Generate the ethics report
 ./scripts/reports/campaign-ethics.sh
 ```
+
+`handoff.sh` only records the handoff and the sending department's checklist.
+Moving the episode to the next `episodes/` folder and updating its metadata
+are manual.
+
+Planned, not built yet: `scripts/workflow/new-episode.sh` and
+`scripts/reports/department-status.sh`. For now, start an episode by hand in
+`episodes/incoming/`, with metadata copied from `metadata/episodes/template.json`.
 
 ## 📅 Periodical Schedule
 
