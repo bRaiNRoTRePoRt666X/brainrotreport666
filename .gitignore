@@ -81,3 +81,7 @@ tmp/*
 *.rar
 *.7z
 *.tar.gz
+
+# Python
+__pycache__/
+*.pyc
